@@ -1,0 +1,10 @@
+{
+    "project": "backend roadmap",
+    "phase": 0,
+    "skills": [
+        "python",
+        "venv",
+        "json"
+    ],
+    "completed": true
+}
