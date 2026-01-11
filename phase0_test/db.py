@@ -1,19 +1,8 @@
 import sqlite3
 
+DB_NAME = "app.db"
+
 def get_connection():
-    return sqlite3.connect("data.db")
-
-def create_table():
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS pages(
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            url TEXT,
-            title TEXT
-        )
-    """)
-
-    conn.commit()
-    conn.close()
+    conn = sqlite3.connect(DB_NAME)
+    conn.row_factory = sqlite3.Row
+    return conn
